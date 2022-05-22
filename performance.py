@@ -27,7 +27,8 @@ def timed(is_even_func, numbers: int = 1000, iterate: int = 1000):
     return the_time / times
 
 
-print(timed(main.minus_2_10))
+print(timed(main.too_understandable))
+
 
 """ls = []
 for i in range(2, 101):
