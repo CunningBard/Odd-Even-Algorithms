@@ -13,7 +13,7 @@ def check_last_num(num: int):
 
 def minus_2(num: int):
     num = abs(num)
-    while num != 1 and num != 0:
+    while num > 1:
         num -= 2
 
     return not bool(num)
@@ -21,7 +21,7 @@ def minus_2(num: int):
 
 def minus_2_10(num: int):
     num = abs(num)
-    while num != 1 and num != 0:
+    while num > 1:
         for i in [10, 8, 6, 4, 2]:
             if num >= i:
                 num -= i
@@ -32,7 +32,7 @@ def minus_2_10(num: int):
 
 def minus_2_100(num: int):
     num = abs(num)
-    while num != 1 and num != 0:
+    while num > 1:
         for i in [100, 98, 96, 94, 92, 90, 88, 86, 84, 82, 80, 78, 76, 74, 72, 70, 68, 66, 64, 62, 60, 58, 56, 54, 52,
                   50, 48, 46, 44, 42, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2]:
             if num >= i:
@@ -52,14 +52,11 @@ def range_num(num: int):
 
 def too_understandable(num: int):
     # credit to Bamboooz#8423
-    if num/2 == int(num/2):
-        return True
-    else:
-        return False
+    return num/2 == int(num/2)
 
 
 if __name__ == '__main__':
-    func = too_understandable
+    func = minus_2
     error = 0
     errors = []
     for number in range(100):
