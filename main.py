@@ -50,13 +50,23 @@ def range_num(num: int):
     return current_bool
 
 
+def while_num(num: int):
+    num = abs(num)
+    state = 0
+    current_bool = True
+    while num != state:
+        state += 1
+        current_bool = not current_bool
+    return current_bool
+
+
 def too_understandable(num: int):
     # credit to Bamboooz#8423
     return num/2 == int(num/2)
 
 
 if __name__ == '__main__':
-    func = minus_2
+    func = too_understandable
     error = 0
     errors = []
     for number in range(100):
